@@ -19,6 +19,8 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 7f;
     public float jumpForce = 14f;
 
+    public AudioSource jumpSoundEffect;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
 
         if(Input.GetButtonDown("Jump") && IsGrounded()) {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            jumpSoundEffect.Play();
         }
         UpdateAnimationState();
     }

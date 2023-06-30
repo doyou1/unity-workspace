@@ -8,6 +8,8 @@ public class ItemCollector : MonoBehaviour
 
     private int cherries = 0;
     public Text cherriesText;
+    public AudioSource collectSoundEffect;
+
 
     private void OnTriggerEnter2D(Collider2D collision) {
 
@@ -15,6 +17,7 @@ public class ItemCollector : MonoBehaviour
             Destroy(collision.gameObject);
             cherries++;
             cherriesText.text = "cherries: " + cherries;
+            collectSoundEffect.Play();
         }
     }
 
