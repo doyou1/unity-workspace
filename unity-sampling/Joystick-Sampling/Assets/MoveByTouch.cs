@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class MoveByTouch : MonoBehaviour
 {
-    void Update()
-    {
-        if(Input.touchCount > 0) {
-            Touch touch = Input.GetTouch(0);
-            Vector3 touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
-            touchPosition.z = 0f;
-            transform.position = touchPosition;
-        }
-    }
 
+    public Joystick joystick;
+    public float speed = 1f;
+
+    void FixedUpdate()
+    {
+        Vector3 direction = Vector3.forward * joystick.Vertical + Vector3.right * joystick.Horizontal;
+        direction.z = 0f;
+        transform.position = direction;
+    }
 }
