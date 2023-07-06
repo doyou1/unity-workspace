@@ -444,7 +444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   joystick: {fileID: 1141088872}
-  speed: 10
+  speed: 1
 --- !u!95 &697074666
 Animator:
   serializedVersion: 5
