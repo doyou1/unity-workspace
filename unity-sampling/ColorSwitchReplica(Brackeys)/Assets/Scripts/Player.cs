@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
-    public float jumpForce = 10f;
+    public float jumpForce = 3f;
     public Rigidbody2D rb;
 
     // void Update()
