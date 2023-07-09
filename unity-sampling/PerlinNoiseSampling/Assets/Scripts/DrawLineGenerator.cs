@@ -23,6 +23,7 @@ public class LineGenerator : MonoBehaviour
 
         if(activeLine != null) {
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Debug.Log("x: " + mousePos.x + ", y:" + mousePos.y);
             activeLine.UpdateLine(mousePos);
         }
     }
